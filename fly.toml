@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for laragigs-empty-moon-9539 on 2024-03-31T14:48:45-05:00
+# fly.toml app configuration file generated for laragigs on 2024-03-31T16:14:42-05:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'laragigs-empty-moon-9539'
+app = 'laragigs'
 primary_region = 'dfw'
 console_command = 'php /var/www/html/artisan tinker'
 
@@ -14,6 +14,8 @@ console_command = 'php /var/www/html/artisan tinker'
 
 [env]
   APP_ENV = 'production'
+  DB_CONNECTION="sqlite"
+  DB_DATABASE="/var/www/html/storage/database/database.sqlite"
   LOG_CHANNEL = 'stderr'
   LOG_LEVEL = 'info'
   LOG_STDERR_FORMATTER = 'Monolog\Formatter\JsonFormatter'
