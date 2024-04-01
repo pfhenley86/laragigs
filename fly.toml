@@ -35,6 +35,10 @@ console_command = 'php /var/www/html/artisan tinker'
 [deploy]
   release_command = "php /var/www/html/artisan migrate --force"
 
+[mounts]
+  source="storage_dir"
+  destination="/var/www/html/storage"
+
 [[vm]]
   memory = '1gb'
   cpu_kind = 'shared'
